@@ -1,0 +1,41 @@
+ANALYSE COMPARATIVE DE MARCHE
+Produits comparables (au moins 2 offres exploitables): 23
+
+FOIS OU L'ENSEIGNE EST LA MOINS CHERE (egalites comptees pour chaque enseigne):
+- Marché Lagune: 6 fois
+- Baobab Shop: 9 fois
+- Comptoir Ivoire: 10 fois
+
+ECART MOYEN AU PRIX LE PLUS BAS, parmi les produits ou l'enseigne est disponible:
+- Marché Lagune: 8,042 FCFA (3.79 %), 18 produits
+- Baobab Shop: 2,702 FCFA (4.67 %), 20 produits
+- Comptoir Ivoire: 6,667 FCFA (2.81 %), 18 produits
+
+TROIS PRODUITS OU COMPARER FAIT LE PLUS ECONOMISER:
+- P11 HP 250 G9 Core i5 8 Go 512 Go: jusqu'a 52,800 FCFA (14.91 %)
+- P09 Apple iPhone 13 128 Go: jusqu'a 26,500 FCFA (6.35 %)
+- P24 Climatiseur LG 1 CV: jusqu'a 26,000 FCFA (10.26 %)
+
+PANIER DE RENTREE (indisponible si au moins un article manque):
+- Marché Lagune: non calculable, articles indisponibles/inexploitables: P04
+- Baobab Shop: 491,500 FCFA
+- Comptoir Ivoire: 484,075 FCFA
+- Achat au moins cher pour chaque article: 477,575 FCFA
+
+HISTORIQUE (moyennes par produit, puis moyenne entre produits; Comptoir = prix catalogue sans remise):
+- Marché Lagune: Black Friday 143,894 FCFA vs annee 161,978 FCFA (-18,084 FCFA, -11.16 %)
+- Baobab Shop: Black Friday 124,579 FCFA vs annee 140,913 FCFA (-16,334 FCFA, -11.59 %)
+- Comptoir Ivoire: Black Friday 160,605 FCFA vs annee 154,843 FCFA (+5,762 FCFA, +3.72 %)
+
+COMPLEXITE ET PERFORMANCE:
+- Historique: 20,876 lignes; indexation/agrégation: 1.1004 s.
+- Temps total du programme (chargement inclus): 1.1705 s.
+- L'historique est lu une seule fois et indexe par (enseigne, produit_id): construction O(n),
+  puis acces moyen O(1); la memoire utilisee est O(n). Un filtrage complet repete pour chaque recherche
+  couterait O(n) par requete (O(n*q) pour q recherches).
+
+REGLES DE NETTOYAGE:
+- Les lignes en rupture, en stock nul, sans prix ou en devise inattendue sont exclues.
+- Les doublons d'une enseigne/produit sont ignores apres la premiere ligne.
+- Les prix aberrants superieurs a 3 fois la mediane des autres offres du produit sont mis en quarantaine.
+- La livraison Baobab est ajoutee; la remise Comptoir est appliquee; Marché Lagune inclut deja la livraison.
